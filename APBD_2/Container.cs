@@ -58,7 +58,22 @@ namespace APBD_2
         
         public void Unload(float weight)
         {
-            loadWeight = 0;
+            loadWeight -= weight;
+        }
+        
+        public bool IsEmpty()
+        {
+            return loadWeight == 0;
+        }
+        
+        public float GetLoadWeight()
+        {
+            return loadWeight;
+        }
+        
+        public void Describe()
+        {
+            Console.WriteLine("Container " + serialNumber + " of type " + type + " with load weight of " + loadWeight + " kg.");
         }
         
         

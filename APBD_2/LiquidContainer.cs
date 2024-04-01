@@ -36,5 +36,11 @@ namespace APBD_2
             
             base.Fill(weight);
         }
+        
+        public void Describe()
+        {
+            base.Describe();
+            Console.WriteLine("Liquid container " + (isDangerous ? "(dangerous)." : "(non dangerous)."));
+        }
     }
 }
